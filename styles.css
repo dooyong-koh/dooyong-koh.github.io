@@ -1,0 +1,250 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f5f5;
+    box-sizing: border-box;
+}
+
+
+/* Header Styling */
+header {
+    background: #222;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Brighter and More Prominent Name Styling */
+header h1 {
+    margin: 0;
+    font-size: 3rem;                /* Increased font size */
+    font-weight: bold;              /* Bolder font weight */
+    color: #ffffff;                 /* Pure white for maximum brightness */
+    letter-spacing: 1.5px;          /* Slight letter spacing for elegance */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5); /* Subtle text shadow for emphasis */
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #ddd;                    /* Lighter gray for contrast with the name */
+}
+
+/* Navigation Bar Styling */
+nav {
+    text-align: center;
+    padding: 1rem;
+    background: #444;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00aced;
+}
+
+/* Section Styling */
+section {
+    padding: 2rem;
+    background: white;
+    margin: 2rem auto;
+    border-radius: 12px;
+    max-width: 900px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #444;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #222;
+    color: white;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* ====================================================== */
+/* FIXED ABOUT SECTION - TWO COLUMNS WITH ICONS BELOW IMAGE */
+/* ====================================================== */
+
+.about-container {
+    display: flex;                   /* Two-column layout */
+    justify-content: space-between;
+    align-items: flex-start;        
+    gap: 40px;                      /* Space between columns */
+    flex-wrap: wrap;                /* Allows wrapping on smaller screens */
+}
+
+/* Left Column: Image with Contact Icons Below */
+.about-image {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 20%;
+    border: 3px solid #ddd;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Icons Below the Image */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.icon-button img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #ddd;
+    padding: 10px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.icon-button:hover img {
+    transform: scale(1.1);
+    background: #444;
+    color: white;
+}
+
+/* Right Column: Text Section */
+.about-text {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;              /* Keeps good readability */
+    max-width: 600px;
+    margin: 0 0 0px 0;            /* Reduced bottom margin to 10px */
+}
+
+/* ================================================ */
+/* RESPONSIVE DESIGN FIX - STACK CONTENT ON SMALL SCREENS */
+/* ================================================ */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 200px;
+    }
+
+    .about-text {
+        text-align: center;
+        align-items: center;
+    }
+
+    .contact-icons {
+        justify-content: center;
+    }
+}
+
+
+
+/* ====================================================== */
+/* PUBLICATIONS SECTION - LARGER IMAGES, MULTIPLE ROWS */
+/* ====================================================== */
+
+.publications-container {
+    display: flex;
+    flex-direction: column;          /* Stack each publication in rows */
+    gap: 0px;                       /* Space between publications */
+}
+
+/* Individual Publication Row Layout */
+.publication-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;                       /* Space between image and text */
+    border-bottom: 1px solid #ddd;   
+    padding-bottom: 0px;
+}
+
+/* Left Column: Larger Image Styling */
+.publication-image {
+    flex: 0 0 150px;                 /* Larger fixed image size */
+    text-align: center;
+}
+
+.publication-image img {
+    width: 100%;
+    max-width: 150px;                /* Increased image size */
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Column: Publication Text Styling */
+.publication-text {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.publication-text a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.publication-text a:hover {
+    text-decoration: underline;
+    color: #004499;
+}
+
+/* ================================================ */
+/* RESPONSIVE DESIGN FIX - STACK CONTENT ON SMALL SCREENS */
+/* ================================================ */
+@media (max-width: 768px) {
+    .publication-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .publication-image {
+        max-width: 200px;
+    }
+
+    .publication-text {
+        text-align: center;
+    }
+}
