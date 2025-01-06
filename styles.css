@@ -21,7 +21,7 @@ header {
 /* Brighter and More Prominent Name Styling */
 header h1 {
     margin: 0;
-    font-size: 3rem;                /* Increased font size */
+    font-size: 2.5rem;                /* Increased font size */
     font-weight: bold;              /* Bolder font weight */
     color: #ffffff;                 /* Pure white for maximum brightness */
     letter-spacing: 1.5px;          /* Slight letter spacing for elegance */
@@ -179,45 +179,50 @@ footer {
 }
 
 
-
 /* ====================================================== */
-/* PUBLICATIONS SECTION - LARGER IMAGES, MULTIPLE ROWS */
+/* PUBLICATIONS SECTION - FIXED VERTICAL ALIGNMENT, TIGHT SPACING */
 /* ====================================================== */
 
 .publications-container {
     display: flex;
-    flex-direction: column;          /* Stack each publication in rows */
-    gap: 0px;                       /* Space between publications */
+    flex-direction: column;         
+    gap: 20px;                     /* Consistent spacing between publication rows */
 }
 
 /* Individual Publication Row Layout */
 .publication-item {
     display: flex;
-    align-items: center;
-    gap: 20px;                       /* Space between image and text */
-    border-bottom: 1px solid #ddd;   
-    padding-bottom: 0px;
+    align-items: center;           /* Vertically center content */
+    justify-content: flex-start;    
+    gap: 20px;                     /* Consistent gap between image and text */
+    border-bottom: 1px solid #ddd; 
+    padding-bottom: 10px;
 }
 
-/* Left Column: Larger Image Styling */
+/* Left Column: Image Styling */
 .publication-image {
-    flex: 0 0 150px;                 /* Larger fixed image size */
+    flex: 0 0 170px;               /* Fixed image size */
     text-align: center;
+    display: flex;                 /* Center image vertically */
+    justify-content: center;
+    align-items: center;
 }
 
 .publication-image img {
-    width: 100%;
-    max-width: 150px;                /* Increased image size */
+    width: 110%;
+    max-width: 300px;
     border-radius: 12px;
     border: 2px solid #ddd;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Right Column: Publication Text Styling */
 .publication-text {
     flex: 1;
-    font-size: 1.1rem;
-    line-height: 1.2;
+    font-size: 1rem;
+    line-height: 1.1;
+    margin: 0;                  
+    padding: 0;
 }
 
 .publication-text a {
@@ -235,16 +240,18 @@ footer {
 /* ================================================ */
 @media (max-width: 768px) {
     .publication-item {
-        flex-direction: column;
+        flex-direction: column;       /* Stack content on smaller screens */
         text-align: center;
-        gap: 15px;
+        gap: 0px;                    /* Minimized gap between image and title */
     }
 
     .publication-image {
-        max-width: 200px;
+        max-width: 250px;
+        margin-bottom: 0px;
     }
 
     .publication-text {
         text-align: center;
+        margin-top: 0;
     }
 }
