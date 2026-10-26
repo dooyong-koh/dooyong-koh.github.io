@@ -156,6 +156,20 @@ h2::after {
 .publication-text p { margin: .45rem 0; }
 .publication-text p:first-child { margin-top: 0; font-size: 1.025rem; font-weight: 600; line-height: 1.5; }
 .publication-text p:last-child { margin-bottom: 0; color: var(--muted); font-size: .88rem; }
+.honors-list { list-style: none; margin: 0; padding: 0; }
+.honors-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: .25rem 1.5rem;
+    flex-wrap: wrap;
+    padding: .85rem 0;
+    border-bottom: 1px solid var(--line);
+}
+.honors-list li:first-child { padding-top: 0; }
+.honors-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.honors-list li > span:first-child { flex: 1 1 320px; font-weight: 500; }
+.honor-years { color: var(--muted); font-size: .9rem; white-space: nowrap; }
 #courseworks > p { margin: 1.75rem 0 .5rem; font-weight: 600; }
 #courseworks ul { margin: 0; padding-left: 1.2rem; columns: 2; column-gap: 2.5rem; }
 #courseworks li { padding: .25rem 0 .25rem .25rem; break-inside: avoid; }
