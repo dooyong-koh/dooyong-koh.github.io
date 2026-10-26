@@ -128,13 +128,13 @@ h2::after {
 .about-text p { margin: 0 0 1.2rem; font-size: 1.025rem; }
 .about-text p:last-child { margin-bottom: 0; }
 .about-text a {
-    color: #00557b;
+    color: #176a86;
     font-weight: 600;
     text-decoration: none;
 }
 .about-text a:hover,
 .about-text a:focus-visible {
-    color: #00557b;
+    color: #176a86;
     text-decoration: underline;
 }
 .publications-container { display: flex; flex-direction: column; gap: 1rem; }
