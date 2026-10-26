@@ -130,7 +130,7 @@ h2::after {
     color: var(--accent);
     font-weight: 600;
     text-decoration: none;
-    background-color: rgba(0, 85, 123, .07);
+    background-color: rgba(0, 85, 123, .04);
     padding: .08em .22em;
     border-radius: 4px;
     -webkit-box-decoration-break: clone;
